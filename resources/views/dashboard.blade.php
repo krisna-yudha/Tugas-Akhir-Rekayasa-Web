@@ -111,7 +111,9 @@
                 </div>
                 <h4 class="crud-title text-primary">CRUD Mahasiswa</h4>
                 <p class="text-secondary mb-3">Kelola data mahasiswa, tambah, edit, dan hapus informasi mahasiswa.</p>
-                <a href="{{ route('mahasiswa.index') }}" class="btn btn-sm btn-primary">Akses <i class="fas fa-arrow-right ms-1"></i></a>
+                <a href="/mahasiswa" class="btn btn-primary">
+                    Akses Mahasiswa <i class="fas fa-arrow-right ms-1"></i>
+                </a>
                 
                 <div class="stats-box">
                     <div class="stats-number text-primary"></div>
@@ -129,7 +131,9 @@
                 </div>
                 <h4 class="crud-title text-success">CRUD Dosen</h4>
                 <p class="text-secondary mb-3">Kelola data dosen, tambah, edit, dan hapus informasi dosen.</p>
-                <a href="{{ route('dosen.index') }}" class="btn btn-sm btn-success">Akses <i class="fas fa-arrow-right ms-1"></i></a>
+                <a href="/dosen" class="btn btn-success">
+                    Akses Dosen <i class="fas fa-arrow-right ms-1"></i>
+                </a>
                 
                 <div class="stats-box">
                     <div class="stats-number text-success"></div>
@@ -147,7 +151,9 @@
                 </div>
                 <h4 class="crud-title text-warning">CRUD Mata Kuliah</h4>
                 <p class="text-secondary mb-3">Kelola data mata kuliah, tambah, edit, dan hapus informasi mata kuliah.</p>
-                <a href="{{ route('makul.index') }}" class="btn btn-sm btn-warning text-white">Akses <i class="fas fa-arrow-right ms-1"></i></a>
+                <a href="/makul" class="btn btn-warning text-white">
+                    Akses Mata Kuliah <i class="fas fa-arrow-right ms-1"></i>
+                </a>
                 
                 <div class="stats-box">
                     <div class="stats-number text-warning"></div>
