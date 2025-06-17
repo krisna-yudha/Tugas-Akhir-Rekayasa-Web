@@ -26,6 +26,8 @@ Route::middleware('auth:sanctum')->group(function() {
     
     // CRUD Mahasiswa routes
     Route::apiResource('mahasiswa', MahasiswaAPIController::class);
+    Route::post('/mahasiswa', [MahasiswaAPIController::class, 'store'])->name('api.mahasiswa.store');
+    Route::get('/mahasiswa', [MahasiswaAPIController::class, 'index'])->name('api.mahasiswa.index');
     
     // CRUD Dosen routes
     Route::apiResource('dosen', DosenAPIController::class);

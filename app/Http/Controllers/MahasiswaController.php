@@ -36,18 +36,27 @@ class MahasiswaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $mhs = Mahasiswa::findOrFail($id);
         $request->validate([
             'nama' => 'required',
-            'nim' => 'required|unique:mahasiswa,nim,'.$id,
+            'nim' => 'required|unique:mahasiswa,nim,'.$id
         ]);
-        $mhs->update($request->all());
-        return redirect()->route('mahasiswa.index')->with('success', 'Data berhasil diupdate');
+
+        $mahasiswa = Mahasiswa::findOrFail($id);
+        $mahasiswa->update([
+            'nama' => $request->nama,
+            'nim' => $request->nim
+        ]);
+        
+        return redirect()->route('mahasiswa.index')
+            ->with('success', 'Data mahasiswa berhasil diupdate');
     }
 
     public function destroy($id)
     {
-        Mahasiswa::destroy($id);
-        return redirect()->route('mahasiswa.index')->with('success', 'Data berhasil dihapus');
+        $mahasiswa = Mahasiswa::findOrFail($id);
+        $mahasiswa->delete();
+        
+        return redirect()->route('mahasiswa.index')
+            ->with('success', 'Data mahasiswa berhasil dihapus');
     }
 }
